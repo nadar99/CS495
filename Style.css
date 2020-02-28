@@ -1,0 +1,56 @@
+﻿body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.container1 {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    background-color: gray;
+    opacity: 0.5;
+    margin-top: 100px;
+    margin-left: 500px;
+    border-radius: 25px;
+}
+
+.container2 {
+    margin-top: 150px;
+    margin-left: 600px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+}
+
+input {
+    padding: 15px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 20px;
+    outline: 0;
+    border: 0;
+}
+
+button {
+    margin-left: 55px;
+    padding: 15px;
+    outline: 0;
+    background-color: white;
+    width: 200px;
+    border: 0;
+    margin-top: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    button:hover {
+        opacity: .8;
+    }
+
+.message {
+    margin: 15px 0 0;
+    font-size: 12px;
+}
