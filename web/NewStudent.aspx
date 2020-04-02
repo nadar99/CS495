@@ -14,11 +14,11 @@
             height: 23px;
         }
         .auto-style3 {
-            width: 144px;
+            width: 213px;
         }
         .auto-style4 {
             height: 23px;
-            width: 144px;
+            width: 213px;
         }
         .auto-style5 {
         }
@@ -27,7 +27,7 @@
             width: 223px;
         }
         .auto-style7 {
-            width: 144px;
+            width: 213px;
             height: 25px;
         }
         .auto-style8 {
@@ -38,7 +38,7 @@
             height: 25px;
         }
         .auto-style10 {
-            width: 144px;
+            width: 213px;
             height: 40px;
         }
         .auto-style11 {
@@ -49,7 +49,7 @@
             height: 40px;
         }
         .auto-style13 {
-            width: 144px;
+            width: 213px;
             height: 24px;
         }
         .auto-style14 {
@@ -57,7 +57,7 @@
         }
         .auto-style15 {
             height: 11px;
-            width: 144px;
+            width: 213px;
         }
         .auto-style16 {
             height: 11px;
@@ -90,7 +90,7 @@
                     <asp:Label ID="Label17" runat="server" Font-Bold="True" Font-Size="Medium" Text="First Name :"></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="fnameTxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -101,7 +101,7 @@
                     <asp:Label ID="Label18" runat="server" style="font-weight: 700" Text="Last Name :"></asp:Label>
                 </td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="lnameTxt" runat="server"></asp:TextBox>
                 </td>
                 <td class="auto-style2"></td>
                 <td class="auto-style2"></td>
@@ -112,31 +112,22 @@
                     <asp:Label ID="Label19" runat="server" Text="Gender:"></asp:Label>
                 </td>
                 <td class="auto-style6">
-                    <asp:RadioButton ID="RadioButton2" runat="server" Text="Female" />
+                    <asp:RadioButtonList ID="genderList" runat="server">
+                        <asp:ListItem Selected="True" Value="f">Female</asp:ListItem>
+                        <asp:ListItem Value="m">Male</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td class="auto-style2">
-                    <asp:RadioButton ID="RadioButton3" runat="server" Text="Male" />
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style2">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">
-                    <asp:Label ID="Label15" runat="server" Text="ID :"></asp:Label>
-                </td>
-                <td class="auto-style18">
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style15">
                     <asp:Label ID="Label6" runat="server" Text="BirthDate :"></asp:Label>
                 </td>
                 <td class="auto-style16">
-                    <asp:Calendar ID="Calendar1" runat="server" Height="16px" Width="82px"></asp:Calendar>
+                    <asp:Calendar ID="birthDate" runat="server" Height="16px" Width="82px"></asp:Calendar>
                 </td>
                 <td class="auto-style17"></td>
                 <td class="auto-style17"></td>
@@ -147,7 +138,7 @@
                     <asp:Label ID="Label7" runat="server" Text="Email"></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="emailTxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -158,7 +149,7 @@
                     <asp:Label ID="Label8" runat="server" Text="Phone Number :"></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="phoneTxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -169,7 +160,7 @@
                     <asp:Label ID="Label9" runat="server" Text="Address :"></asp:Label>
                 </td>
                 <td class="auto-style11">
-                    <asp:TextBox ID="TextBox6" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="addressTxt" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </td>
                 <td class="auto-style12"></td>
                 <td class="auto-style12"></td>
@@ -180,7 +171,7 @@
                     <asp:Label ID="Label10" runat="server" Text="Password :"></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="TextBox7" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="passwordTxt" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -202,7 +193,7 @@
                     <asp:Label ID="Label12" runat="server" Text="Nationality : "></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                    <asp:DropDownList ID="nationalityList" runat="server" >
                         <asp:ListItem>Egyption</asp:ListItem>
                         <asp:ListItem>Amercian</asp:ListItem>
                     </asp:DropDownList>
@@ -216,7 +207,7 @@
                     <asp:Label ID="Label13" runat="server" Text="Faculty :"></asp:Label>
                 </td>
                 <td class="auto-style18">
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="facultyList" runat="server">
                         <asp:ListItem>CS</asp:ListItem>
                         <asp:ListItem>Engineering</asp:ListItem>
                     </asp:DropDownList>
@@ -230,7 +221,7 @@
                     <asp:Label ID="Label14" runat="server" Text="Bus : "></asp:Label>
                 </td>
                 <td class="auto-style8">
-                    <asp:CheckBox ID="CheckBox1" runat="server" />
+                    <asp:CheckBox ID="busCheck" runat="server" Checked="True" />
                 </td>
                 <td class="auto-style9"></td>
                 <td class="auto-style9"></td>
@@ -249,7 +240,7 @@
             <tr>
                 <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style18">
-                    <asp:Button ID="Button1" runat="server" Height="36px" style="font-weight: 700" Text="Submit" Width="87px" />
+                    <asp:Button ID="Button1" runat="server" Height="36px" style="font-weight: 700" Text="Submit" Width="87px" OnClick="Button1_Click" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
